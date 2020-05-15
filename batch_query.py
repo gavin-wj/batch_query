@@ -65,7 +65,7 @@ if not (wb == None or ws == None):
 			if ws.cell(row=1, column=i).value == inputFieldName:
 				exportIndex = i
 				for k in range(2, ws.max_row+1):
-					cntrId = ws.cell(row=k, column=1).value
+					cntrId = ws.cell(row=k, column=exportIndex).value
 					if cntrId == None or cntrId.strip() == "":
 						continue
 					totalNum = totalNum + 1
